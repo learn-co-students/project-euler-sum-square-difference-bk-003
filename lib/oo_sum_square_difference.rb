@@ -1,1 +1,13 @@
-# Implement your object-oriented solution here!
+class SumSquareDifference
+  def initialize(number)
+    @number = number
+  end
+
+  def difference
+    arr=*(1..@number)
+    sum = arr.map { |x| (x**2)}.inject(:+)
+    diff = (arr.inject(:+)) ** 2
+    return diff - sum
+  end
+end
+
